@@ -1,0 +1,18 @@
+---
+version: "2.1"
+services:
+  heimdall:
+    image: linuxserver/heimdall
+    container_name: heimdall
+    environment:
+      - PUID=0
+      - PGID=0
+      - TZ=Asia/Shanghai
+    volumes:
+      - ./lan:/var/www/localhost/heimdall/resources/lang
+      - ./app:/var/www/localhost/heimdall/app
+      - ./config:/config
+    ports:
+      - 33:80
+      - 44:443
+    restart: unless-stopped
