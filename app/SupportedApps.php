@@ -107,7 +107,7 @@ abstract class SupportedApps
 
     public static function getList()
     {
-        $list_url = 'https://apps.heimdall.site/list';
+        $list_url = 'https://gitee.com/sKai-Zhang/Heimdall-List/raw/master/list.json';
         $client = new Client(['http_errors' => false, 'timeout' => 15, 'connect_timeout' => 15]);
         return $client->request('GET', $list_url);
     }
