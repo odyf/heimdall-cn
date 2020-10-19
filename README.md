@@ -5,15 +5,26 @@
 国内源修改
 ## 使用
 ```
-mkdir /home/heimdall
-cd /home/heimdall
+
+cd /home
 git clone https://github.com/odyf/heimdall-cn.git
 cd heimdall-cn
+docker-compose up
+git checkout app/SupportedApps.php
+git checkout lan/en/app.php
 docker-compose up -d
 ```
 
+## 注意事项
+
+使用除root以外的用户启动容器 不然会报错
+
+
+
+
 
 ## 使用项目
+
 [linuxserver/heimdall](linuxserver/heimdall)
 
 [Heimdall 大中华镜像源(修改版)](https://gitee.com/sKai-Zhang/Heimdall-List/tree/master)

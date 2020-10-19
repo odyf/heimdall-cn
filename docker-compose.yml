@@ -5,8 +5,8 @@ services:
     image: linuxserver/heimdall
     container_name: heimdall
     environment:
-      - PUID=0
-      - PGID=0
+      - PUID=1000
+      - PGID=1000
       - TZ=Asia/Shanghai
     volumes:
       - ./lan:/var/www/localhost/heimdall/resources/lang
